@@ -3973,17 +3973,17 @@ section#softSkills {
     .cards-container {
       display: flex;
       transition: transform 1s ease;
-      cursor: pointer; /* clickable card */
+      cursor: pointer;
 
       .card {
-        flex: 0 0 60%;       /* card width on desktop */
-        margin: 0 1em;       /* card inter */
+        flex: 0 0 60%;
+        margin: 0 1em;
         background: #fff;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         padding: 1.5em;
         position: relative;
-        border: 1px solid transparent; /* complete frame */
+        border: 1px solid transparent;
         transition: all 0.3s ease;
 
         h3 {
@@ -4020,8 +4020,8 @@ section#softSkills {
 
         .more-btn {
           display: inline-flex;
-          align-items: center;       /* 垂直置中 */
-          justify-content: center;   /* 水平置中 */
+          align-items: center;
+          justify-content: center;
           margin-top: 2em;
           margin-bottom: 0.5em;
           padding: 0.5em 1em;
@@ -4040,13 +4040,12 @@ section#softSkills {
       }
     }
 
-    /* Adjust to mobile screen size */
     @media (max-width: 767px) {
       width: 90%;
 
       .cards-container {
         .card {
-          flex: 0 0 65%; /* card width on mobile */
+          flex: 0 0 65%;
           margin: 0 0.5em;
         }
       }
@@ -4063,72 +4062,104 @@ section#softSkills {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2000; /* 確保蓋在最上層 */
+    z-index: 2000;
 
-	&.hidden { display: none; }
+    &.hidden { display: none; }
 
     .overlay-content {
       background: #fff;
-	  border: #4CAF50 4px solid;
+      border: #4CAF50 4px solid;
       padding: 2em;
       border-radius: 10px;
       max-width: 900px;
       width: 95%;
-	  height: 90%;
+      height: 90%;
       display: flex;
       gap: 2em;
       position: relative;
 
       .overlay-left {
         flex: 1;
-		width: 40%;
+        width: 40%;
+		display: flex;
+    	flex-direction: column;	
+
+        #overlay-title {
+          font-weight: bold;
+          margin-bottom: 0.3em;
+		  flex-shrink: 0; /* 不縮小 */
+        }
+
+        #overlay-year {
+          margin-bottom: 0.3em;
+          font-style: italic;
+		  flex-shrink: 0; /* 不縮小 */
+        }
+
+        #overlay-text {
+          text-align: left;
+          line-height: 1.5;
+          overflow-y: auto;
+		  flex-grow: 1;      /* 填滿剩餘高度 */
+		  padding-right: 0.5em; /* 留空間給滾動條 */
+
+          p {
+            margin: 0 0 0.5em 0; /* 縮小段落間距 */
+          }
+
+          ul {
+            margin: 0 0 0.5em 1.2em; /* 縮小列表上下間距，左縮排 */
+            padding-left: 1.2em;
+          }
+
+          li {
+            margin-bottom: 0.3em; /* li 之間間距縮小 */
+          }
+        }
       }
 
       .overlay-right {
         flex: 1;
-		display: flex;
-		flex-direction: column; /* 上下排列 */
-		align-items: center;  /* 右邊對齊 */
-		max-height: 70vh;
-		gap: 0.5em;
-		overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 70vh;
+        gap: 0.5em;
+        overflow: hidden;
 
-		.close-btn {
-			position: absolute;
-			top: 1em;
-			right: 1em;
-			align-items: center;       /* 垂直置中 */
-			justify-content: center;   /* 水平置中 */
-			width: 5%;
-			padding: 0em 0em;
-			cursor: pointer;
-			font-size: 0.5;
-			border: none;
-			border-radius: 30px;
-			color: white;
-			margin-bottom: 2em;
-			transition: background-color 0.3s;
+        .close-btn {
+          position: absolute;
+          top: 1em;
+          right: 1em;
+          width: 5%;
+          padding: 0;
+          cursor: pointer;
+          border: none;
+          border-radius: 30px;
+          color: white;
+          margin-bottom: 2em;
+          transition: background-color 0.3s;
 
-			&:hover {
-			color: gray;
-			}
-		}
+          &:hover {
+            color: gray;
+          }
+        }
 
-		#overlay-images {
+        #overlay-images {
           width: 100%;
           height: 70%;
           display: flex;
-		  justify-content: center; /* 水平置中 */
-		  align-items: center;     /* 垂直置中 */
-		  position: relative;
-		  overflow: hidden;
-		  margin-bottom: 1em;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          overflow: hidden;
+          margin-bottom: 1em;
 
           img {
             width: 100%;
-			height: 100%;
+            height: 100%;
             object-fit: contain;
-			position: absolute;
+            position: absolute;
             top: 10%;
             left: 0;
             opacity: 0;
@@ -4143,104 +4174,112 @@ section#softSkills {
           }
         }
 
-		#overlay-dots {
+        #overlay-dots {
           display: flex;
-          flex-direction: row;
-		  justify-content: center; 
-		  align-items: center;
-		  gap: 0.5em;
-        }
+          justify-content: center;
+          align-items: center;
+          gap: 0.5em;
 
-        #overlay-dots .dot {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background: #ccc;
-          transition: all 0.3s;
-          cursor: pointer;
-        }
+          .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ccc;
+            transition: all 0.3s;
+            cursor: pointer;
+          }
 
-        #overlay-dots .dot.active {
-          width: 14px;
-          height: 14px;
-          background: gray;
+          .dot.active {
+            width: 14px;
+            height: 14px;
+            background: gray;
+          }
         }
-
-      }	
+      }
     }
   }
 
-	/* ====== Responsive Overlay ====== */
-	@media (max-width: 767px) {
-	.overlay-content {
-		flex-direction: column !important;
-		width: 95%;
-		height: 95%;
-		max-height: 95vh;
-		padding: 1em;
-		overflow-y: auto; /* 滾動超出內容 */
+  /* ====== Responsive Overlay ====== */
+  @media (max-width: 767px) {
+    .overlay-content {
+      flex-direction: column !important;
+      width: 100%;
+      height: 95%;
+      max-height: 95vh;
+      overflow-y: auto;
+	  overflow-x: hidden;
+	  gap: 0.1em !important; 
+	  box-sizing: border-box;
+    }
+
+    .overlay-left,
+    .overlay-right {
+      width: 100% !important;
+      height: auto;
+      margin-top: 0; 
+	  margin-bottom: 0;
+      overflow: visible;
+    }
+
+    .overlay-left {
+      overflow-y: auto;
+      padding-right: 1em; 
+      box-sizing: content-box;
+    }
+
+	#overlay-text {
+	  text-align: left;
+      line-height: 1.5;
+      overflow-y: visible !important;
+      flex-grow: 1;
+      padding-right: 0.5em;
 	}
 
-	.overlay-left,
-	.overlay-right {
-		width: 100% !important;
-		height: auto;
-		margin-bottom: 0;
-		overflow: visible;
-	}
+    #overlay-images {
+      width: 100% !important;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible; 
+    }
 
-	.overlay-left {
-		overflow-y: auto;
-		padding-right: 1em; 
-		box-sizing: content-box;
-	}
+    #overlay-images img {
+      width: 100%;
+      height: auto;
+      top: 0;
+      object-fit: contain;
+      position: relative;
+    }
 
-	#overlay-images {
-		width: 100% !important;
-		height: auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		overflow: visible; 
-	}
+    .close-btn {
+      width: auto;
+      height: auto;
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: 0;
+      cursor: pointer;
+    }
 
-	#overlay-images img {
-		width: 100%;
-		height: auto;
-		top: 0;
-		object-fit: contain;
-		position: relative;
-	}
+    .close-btn::before {
+      content: "✖";
+      position: absolute;
+      top: 0.8em;
+      right: 0.3em;
+      font-size: 1.5rem;
+      color: darkgray;
+    }
 
-	.close-btn {
-		width: auto;
-		height: auto;
-		background: none;
-		border: none;
-		padding: 0;
-		font-size: 0;
-		cursor: pointer;
-	}
+    /* 手機版縮小點 */
+    #overlay-dots .dot {
+      width: 5px; 
+      height: 5px;
+    }
 
-	.close-btn::before {
-		content: "✖";
-		position: absolute;
-		top: 0.8em;
-		right: 0.3em;
-		font-size: 1.5rem;
-		color: darkgray;
-	}
-
-	/* 手機版縮小點 */
-	#overlay-dots .dot {
-		width: 5px; 
-		height: 5px;
-	}
-
-	#overlay-dots .dot.active {
-		width: 7px; 
-		height: 7px;
-	}
-	}
-
+    #overlay-dots .dot.active {
+      width: 7px; 
+      height: 7px;
+    }
+  }
 }

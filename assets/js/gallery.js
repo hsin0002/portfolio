@@ -97,6 +97,7 @@ function initGallery() {
 function initCardOverlay() {
   const overlay = document.querySelector(".overlay");
   const overlayTitle = document.querySelector("#overlay-title");
+  const overlayYear = document.querySelector("#overlay-year");
   const overlayText = document.querySelector("#overlay-text");
   const overlayImages = document.querySelector("#overlay-images");
   const overlayDots = document.querySelector("#overlay-dots");
@@ -125,12 +126,33 @@ function initCardOverlay() {
       }
 
       overlayTitle.textContent = project.title || "";
-      overlayText.textContent = project.text || "";
+      overlayYear.textContent = project.year || "";
+      overlayText.innerHTML = ""; // 清空
 
       overlayImages.innerHTML = "";
       overlayDots.innerHTML = "";
       captionEl.textContent = "";
 
+      // 顯示Text內容
+      project.text.forEach(point => {
+      if (Array.isArray(point)) {
+        const ul = document.createElement("ul");
+        point.forEach(liText => {
+          const li = document.createElement("li");
+          li.textContent = liText;
+          ul.appendChild(li);
+        });
+        overlayText.appendChild(ul);
+      } else {
+        const p = document.createElement("p");
+        p.textContent = point;
+        overlayText.appendChild(p);
+      }
+    });
+
+
+
+      // 展示照片
       imagesData = project.images || [];
 
       imagesData.forEach((imgData, i) => {
