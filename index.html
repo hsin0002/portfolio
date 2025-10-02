@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Portfolio WU Hsin-Jou</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/lang-switch.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+      /* 確保 Header 在 main 上方 */
+      #header {
+        position: relative;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Header -->
+      <header id="header">
+        <span class="logo"><img src="images/logo.svg" alt="" /></span>
+        <h1>WU Hsin-Jou</h1>
+        <p>Master of Computer Science<br>
+          Seeking AI, Data Science & Embedded Systems Internship<br>
+          6 months from Feb 2026</p>
+
+        <!-- 語言切換 -->
+        <div class="lang-switch">
+          <button onclick="loadLanguage('en')">English</button>
+          <button onclick="loadLanguage('fr')">Français</button>
+        </div>
+
+      </header>
+
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li><a href="#profile" class="active">Profile</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#mainSkills">Main Skills</a></li>
+		      <li><a href="#softSkills">Soft Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main (內容會動態載入) -->
+      <div id="main"></div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <p class="copyright">&copy; Portfolio WU Hsin-Jou.</p>
+      </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lang.js"></script>
+    <script src="assets/js/gallery.js"></script>
+  </body>
+</html>

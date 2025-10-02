@@ -1,0 +1,28 @@
+{
+  "freshman": {
+    "title": "Freshman Website Project",
+    "text": "Joined the marketing and planning group to design the UI and plan the project schedule. Joined the marketing and planning group to design the UI and plan the project schedule. Joined the marketing and planning group to design the UI and plan the project schedule. Joined the marketing and planning group to design the UI and plan the project schedule.",
+    "images": [
+      { "src": "../../images/NCUfresh1.png", "caption": "Homepage of the website designed by me." },
+      { "src": "../../images/NCUfresh_merge.png", "caption": "Team members for the website development." }
+    ]
+  },
+  "dorm": {
+    "title": "Dormitory Management",
+    "text": "Served as floor manager and later as dorm leader, resolving disputes and assisting residents.",
+    "images": [
+      { "src": "../../images/dorm1.jpg", "caption": "Daily floor check" },
+      { "src": "../../images/dorm2.jpg", "caption": "Team meeting with residents" },
+      { "src": "../../images/dorm3.jpg", "caption": "Dorm leader announcement" }
+    ]
+  },
+  "culture": {
+    "title": "Cultural Dorm Events",
+    "text": "Planned and held several cultural events for international and native students.",
+    "images": [
+      { "src": "../../images/culture4.jpg", "caption": "International food festival" },
+      { "src": "../../images/culture2.jpg", "caption": "Cultural dance performance" },
+      { "src": "../../images/culture3.jpg", "caption": "Final celebration event" }
+    ]
+  }
+}

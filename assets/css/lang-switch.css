@@ -1,0 +1,36 @@
+/* lang-switch.css */
+
+/* 父容器置中 */
+.lang-switch {
+  display: flex;
+  justify-content: center;
+  gap: 1em;         /* 按鈕間距 */
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+/* 按鈕樣式 */
+.lang-switch button {
+  display: inline-flex;
+  align-items: center;       /* 垂直置中 */
+  justify-content: center;   /* 水平置中 */
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+/* 滑鼠 hover 效果 */
+.lang-switch button:hover {
+  background-color: #45a049;
+}
+
+/* 當前選定語言 */
+.lang-switch button.active {
+  background-color: #4CAF50; /* 綠色 */
+  color: white;             /* 確保字體是白色 */
+}
+
