@@ -10,8 +10,8 @@
       "Gained experience in teamwork, negotiation, and coordinating across multiple groups."
     ]]
     ,"images": [
-      { "src": "../../images/NCUfresh1.png", "caption": "Homepage of the website designed by me." },
-      { "src": "../../images/NCUfresh2.png", "caption": "Team members for the website development." }
+      { "src": "assets/images/NCUfresh1.png", "caption": "Homepage of the website designed by me." },
+      { "src": "assets/images/NCUfresh2.png", "caption": "Team members for the website development." }
     ]
   },
   "dorm": {
@@ -23,8 +23,8 @@
       "Gained skills in conflict resolution, communication, and teamwork."
     ]],
     "images": [
-      { "src": "../../images/dorm1.JPG", "caption": "Hosting the Dormitory Residents' Assembly." },
-      { "src": "../../images/dorm2.jpeg", "caption": "Dormitory Residents' Assembly - Report on Daily Affairs ." }
+      { "src": "assets/images/dorm1.JPG", "caption": "Hosting the Dormitory Residents' Assembly." },
+      { "src": "assets/images/dorm2.jpeg", "caption": "Dormitory Residents' Assembly - Report on Daily Affairs ." }
     ]
   },
   "culture": {
@@ -40,12 +40,12 @@
       "Planned and delegated tasks according to participants' strengths."
     ],
     "images": [
-      { "src": "../../images/cultural1.JPG", "caption": "Teaching participants how to make a spring roll." },
-      { "src": "../../images/cultural2.JPG", "caption": "Participants for the Qing-Ming festival dorm event." },
-      { "src": "../../images/cultural3.jpg", "caption": "Participants crafting gingerbread houses with creative." },
-      { "src": "../../images/cultural4.jpg", "caption": "Cute gingerbread houses and their creators." },
-      { "src": "../../images/cultural5.jpg", "caption": "Handmade rice dumpling sachet — my finished work." },
-      { "src": "../../images/cultural6.png", "caption": "Step-by-Step Guide for Participants to Make Sachets." }
+      { "src": "assets/images/cultural1.JPG", "caption": "Teaching participants how to make a spring roll." },
+      { "src": "assets/images/cultural2.JPG", "caption": "Participants for the Qing-Ming festival dorm event." },
+      { "src": "assets/images/cultural3.jpg", "caption": "Participants crafting gingerbread houses with creative." },
+      { "src": "assets/images/cultural4.jpg", "caption": "Cute gingerbread houses and their creators." },
+      { "src": "assets/images/cultural5.jpg", "caption": "Handmade rice dumpling sachet — my finished work." },
+      { "src": "assets/images/cultural6.png", "caption": "Step-by-Step Guide for Participants to Make Sachets." }
     ]
   }
 }

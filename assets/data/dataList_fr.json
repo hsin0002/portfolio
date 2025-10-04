@@ -12,8 +12,8 @@
       ]
     ],
     "images": [
-      { "src": "../../images/NCUfresh1.png", "caption": "Page d'accueil du site web conçue par moi." },
-      { "src": "../../images/NCUfresh2.png", "caption": "Membres de l'équipe pour le développement du site web." }
+      { "src": "assets/images/NCUfresh1.png", "caption": "Page d'accueil du site web conçue par moi." },
+      { "src": "assets/images/NCUfresh2.png", "caption": "Membres de l'équipe pour le développement du site web." }
     ]
   },
   "dorm": {
@@ -25,8 +25,8 @@
       "Acquis des compétences en résolution de conflits, communication et travail en équipe."
     ]],
     "images": [
-      { "src": "../../images/dorm1.JPG", "caption": "Animation de l'assemblée des résidents du dortoir." },
-      { "src": "../../images/dorm2.jpeg", "caption": "Assemblée des résidents du dortoir - Rapport sur les affaires quotidiennes." }
+      { "src": "assets/images/dorm1.JPG", "caption": "Animation de l'assemblée des résidents du dortoir." },
+      { "src": "assets/images/dorm2.jpeg", "caption": "Assemblée des résidents du dortoir - Rapport sur les affaires quotidiennes." }
     ]
   },
   "culture": {
@@ -42,12 +42,12 @@
       "Planification et délégation des tâches selon les forces des participants."
     ],
     "images": [
-      { "src": "../../images/cultural1.JPG", "caption": "Apprentissage de la fabrication d'un rouleau de printemps aux participants." },
-      { "src": "../../images/cultural2.JPG", "caption": "Participants à l'événement culturel du festival de Qing-Ming au dortoir." },
-      { "src": "../../images/cultural3.jpg", "caption": "Participants en train de créer des maisons en pain d'épices avec créativité." },
-      { "src": "../../images/cultural4.jpg", "caption": "Maisons en pain d'épices et leurs créateurs." },
-      { "src": "../../images/cultural5.jpg", "caption": "Sachet de zongzi fait main — mon œuvre terminée." },
-      { "src": "../../images/cultural6.png", "caption": "Guide étape par étape pour fabriquer les sachets." }
+      { "src": "assets/images/cultural1.JPG", "caption": "Apprentissage de la fabrication d'un rouleau de printemps aux participants." },
+      { "src": "assets/images/cultural2.JPG", "caption": "Participants à l'événement culturel du festival de Qing-Ming au dortoir." },
+      { "src": "assets/images/cultural3.jpg", "caption": "Participants en train de créer des maisons en pain d'épices avec créativité." },
+      { "src": "assets/images/cultural4.jpg", "caption": "Maisons en pain d'épices et leurs créateurs." },
+      { "src": "assets/images/cultural5.jpg", "caption": "Sachet de zongzi fait main — mon œuvre terminée." },
+      { "src": "assets/images/cultural6.png", "caption": "Guide étape par étape pour fabriquer les sachets." }
     ]
   }
 }

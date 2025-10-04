@@ -109,7 +109,8 @@ function initCardOverlay(lang) {
 
   async function loadJson() {
     if (!jsonData) {
-      const res = await fetch(`../../dataList_${lang}.json`);
+      const repoName = 'my-website';
+      const res = await fetch(`/${repoName}/data/dataList_${lang}.json`);
       if (!res.ok) throw new Error(`dataList_${lang}.json not found`);
       jsonData = await res.json();
     }
