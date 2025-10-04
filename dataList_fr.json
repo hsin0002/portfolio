@@ -1,0 +1,53 @@
+{
+  "freshman": {
+    "title": "Projet du site web pour les nouveaux étudiants",
+    "year": "2020 - 2021",
+    "text": [
+      "Dirigé l'équipe de marketing et de planification en tant que chef de groupe. Coordonné avec les autres équipes pour s'assurer que les idées étaient réalisables et applicables. Pendant la pandémie de Covid-19, guidé l'équipe pour trouver le meilleur équilibre entre travail en présentiel et à distance, ce qui a permis au projet de réussir malgré les circonstances difficiles.",
+      [
+        "Conçu l'interface du site web de A à Z avec Adobe XD, tout en planifiant le flux global du projet.",
+        "Développé de solides compétences en résolution de problèmes en affrontant les défis de conception et d'implémentation.",
+        "Pratiqué une gestion efficace du temps et des ajustements de planning pour maintenir le projet sur les rails.",
+        "Acquis de l'expérience en travail d'équipe, négociation et coordination entre plusieurs groupes."
+      ]
+    ],
+    "images": [
+      { "src": "../../images/NCUfresh1.png", "caption": "Page d'accueil du site web conçue par moi." },
+      { "src": "../../images/NCUfresh2.png", "caption": "Membres de l'équipe pour le développement du site web." }
+    ]
+  },
+  "dorm": {
+    "title": "Gestion du dortoir",
+    "year": "2020 - 2024",
+    "text": [[
+      "Servi en tant que responsable d'étage pendant 2 ans et chef de dortoir pendant 2 ans, en résolvant les conflits et en assistant les résidents.",
+      "Agit comme un pont entre les résidents et l'université, en signalant les problèmes et en collaborant avec le personnel de l'école pour développer des solutions.",
+      "Acquis des compétences en résolution de conflits, communication et travail en équipe."
+    ]],
+    "images": [
+      { "src": "../../images/dorm1.JPG", "caption": "Animation de l'assemblée des résidents du dortoir." },
+      { "src": "../../images/dorm2.jpeg", "caption": "Assemblée des résidents du dortoir - Rapport sur les affaires quotidiennes." }
+    ]
+  },
+  "culture": {
+    "title": "Événements culturels au dortoir",
+    "year": "2022 - 2024",
+    "text": [
+      "Organisé et dirigé plusieurs événements culturels au dortoir, en collaborant avec d'autres responsables pour encourager l'interaction entre les résidents. Les événements comprenaient :",
+      [
+        "Activité de rouleaux de printemps pour le festival de Qing-Ming - présentation des traditions taïwanaises aux étudiants internationaux et invitation à partager leurs propres festivals culturels.",
+        "Solstice d'hiver & maisons en pain d'épices et Tangyuan pour Noël - les équipes ont créé des maisons en pain d'épices et partagé des Tangyuan, symbolisant la réunion et la chaleur.",
+        "Fabrication de sachets en forme de zongzi pour le festival des bateaux-dragons - les résidents ont cousu à la main des sachets en suivant des guides étape par étape pour que tout le monde puisse réussir."
+      ],
+      "Planification et délégation des tâches selon les forces des participants."
+    ],
+    "images": [
+      { "src": "../../images/cultural1.JPG", "caption": "Apprentissage de la fabrication d'un rouleau de printemps aux participants." },
+      { "src": "../../images/cultural2.JPG", "caption": "Participants à l'événement culturel du festival de Qing-Ming au dortoir." },
+      { "src": "../../images/cultural3.jpg", "caption": "Participants en train de créer des maisons en pain d'épices avec créativité." },
+      { "src": "../../images/cultural4.jpg", "caption": "Maisons en pain d'épices et leurs créateurs." },
+      { "src": "../../images/cultural5.jpg", "caption": "Sachet de zongzi fait main — mon œuvre terminée." },
+      { "src": "../../images/cultural6.png", "caption": "Guide étape par étape pour fabriquer les sachets." }
+    ]
+  }
+}

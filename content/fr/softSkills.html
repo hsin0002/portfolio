@@ -1,13 +1,70 @@
 <section id="softSkills" class="main special">
   <header class="major">
-    <h2><string>Contactez-moi</string></h2>
-    <p>Je recherche un stage de 6 mois à partir de février 2026.<br>
-    Intéressée par l’IA, la Data Science et les systèmes embarqués.</p>
+    <h2>Compétences Douces</h2>
+    <p>Principales qualités personnelles démontrées à travers des expériences réelles.</p>
   </header>
-  <footer class="major">
-    <ul class="actions special">
-      <li><a href="mailto:your.email@example.com" class="button primary">Me contacter</a></li>
-      <li><a href="assets/cv_fr.pdf" class="button">Télécharger le CV</a></li>
-    </ul>
-  </footer>
+
+  <div class="gallery-container">
+    <div class="cards-container">
+      <!-- Overview Card -->
+      <div class="card overview">
+        <h3>Compétences Douces Clés</h3>
+        <ul class="skills-list">
+          <li>Travail en équipe</li>
+          <li>Communication</li>
+          <li>Gestion du temps</li>
+          <li>Résolution de problèmes</li>
+          <li>Adaptabilité</li>
+          <li>Leadership</li>
+          <li>Négociation</li>
+          <li>Auto-apprentissage</li>
+        </ul>
+      </div>
+
+      <!-- Cards -->
+      <div class="card">
+        <h3>Projet du site web pour les nouveaux étudiants</h3>
+        <span class="date">2020 - 2021</span>
+        <p>
+          Direction du groupe marketing et planification. Conception de l'UI/UX.
+        </p>
+        <button class="more-btn" data-folder="freshman">Plus</button>
+      </div>
+
+      <div class="card">
+        <h3>Gestion du dortoir</h3>
+        <span class="date">2020 - 2024</span>
+        <p>
+          Responsable d'étage pendant 2 ans et chef de dortoir pendant 2 ans, résolution de conflits et assistance aux résidents.
+        </p>
+        <button class="more-btn" data-folder="dorm">Plus</button>
+      </div>
+
+      <div class="card">
+        <h3>Événements culturels au dortoir</h3>
+        <span class="date">2022 - 2024</span>
+        <p>
+          Planification et organisation de plusieurs événements culturels pour les étudiants internationaux et locaux.
+        </p>
+        <button class="more-btn" data-folder="culture">Plus</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay hidden" id="overlay">
+    <div class="overlay-content">
+      <div class="overlay-left">
+        <h3 id="overlay-title"></h3>
+        <p id="overlay-year"></p>
+        <p id="overlay-text"></p>
+      </div>
+      <div class="overlay-right">
+        <button class="close-btn">Fermer</button>
+        <div id="overlay-images"></div>
+        <div id="overlay-caption"></div>
+        <div id="overlay-dots"></div> <!-- Indicateur d’images -->
+      </div>
+    </div>
+  </div>
 </section>

@@ -2,13 +2,15 @@
   "freshman": {
     "title": "Freshman Website Project",
     "year": "2020 - 2021",
-    "text": [[
-      "Led the marketing and planning team as group leader, coordinating with other teams to ensure ideas were feasible and implementable.",
-      "Designed the website UI from scratch using Adobe XD, while planning the overall project development flow.",
-      "Developed strong problem-solving skills by addressing design and implementation challenges.",
-      "Practiced effective time management and schedule adjustments to keep the project on track.",
-      "Gained experience in teamwork, negotiation, and coordinating across multiple groups."
-    ]]
+    "text": [
+      "Led the marketing and planning team as group leader. Coordinated with other teams to ensure ideas were feasible and implementable. During the Covid-19 pandemic, guided the team in finding the best mix of in-person and remote work, which helped the project succeed despite the challenging circumstances.",
+      [
+        "Designed the website UI from scratch using Adobe XD, while planning the overall project development flow.",
+        "Developed strong problem-solving skills by addressing design and implementation challenges.",
+        "Practiced effective time management and schedule adjustments to keep the project on track.",
+        "Gained experience in teamwork, negotiation, and coordinating across multiple groups."
+      ]
+    ]
     ,"images": [
       { "src": "../../images/NCUfresh1.png", "caption": "Homepage of the website designed by me." },
       { "src": "../../images/NCUfresh2.png", "caption": "Team members for the website development." }

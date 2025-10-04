@@ -1985,6 +1985,9 @@ input, select, textarea {
 			.button.primary.icon:before {
 				color: #ffffff !important;
 			}
+		#contact-btn {
+			background-color: #9bb2e1; /* 按鈕背景色 */
+		}
 
 /* Form */
 
@@ -4174,6 +4177,10 @@ section#softSkills {
           }
         }
 
+		#overlay-caption {
+			text-align: left;
+		}
+
         #overlay-dots {
           display: flex;
           justify-content: center;
@@ -4283,3 +4290,4 @@ section#softSkills {
     }
   }
 }
+

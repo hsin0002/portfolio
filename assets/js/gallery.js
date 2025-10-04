@@ -94,7 +94,7 @@ function initGallery() {
   updateGallery();
 }
 
-function initCardOverlay() {
+function initCardOverlay(lang) {
   const overlay = document.querySelector(".overlay");
   const overlayTitle = document.querySelector("#overlay-title");
   const overlayYear = document.querySelector("#overlay-year");
@@ -109,13 +109,13 @@ function initCardOverlay() {
 
   async function loadJson() {
     if (!jsonData) {
-      const res = await fetch("../../dataList.json");
-      if (!res.ok) throw new Error("images.json not found");
+      const res = await fetch(`../../dataList_${lang}.json`);
+      if (!res.ok) throw new Error(`dataList_${lang}.json not found`);
       jsonData = await res.json();
     }
     return jsonData;
   }
-
+  
   async function loadFolder(folder) {
     try {
       const data = await loadJson();

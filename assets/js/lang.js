@@ -6,7 +6,8 @@ async function loadLanguage(lang) {
       experience: "Experience",
       mainSkills: "Main Skills",
       softSkills: "Soft Skills",
-      contact: "Contact"
+      contact: "Contact",
+      headerText: "Master of Computer Science<br>Seeking AI, Data Science & Embedded Systems Internship<br>6-month internship from Feb 2026"
     },
     fr: {
       profile: "Profil",
@@ -14,7 +15,8 @@ async function loadLanguage(lang) {
       experience: "Expérience",
       mainSkills: "Compétences principales",
       softSkills: "Compétences relationnelles",
-      contact: "Contact"
+      contact: "Contact",
+      headerText: "Diplôme d'ingénieur en informatique<br>À la recherche d'un stage en IA, Data Science et Systèmes Embarqués<br>Stage de 6 mois dès février 2026"
     }
   };
 
@@ -29,6 +31,15 @@ async function loadLanguage(lang) {
       navItems[index].textContent = navTexts[lang][section];
     }
   });
+
+  // 更新 Header 文字
+  const headerP = document.getElementById("header-text");
+  if (headerP) {
+    headerP.innerHTML = navTexts[lang].headerText;
+  }
+
+  // 儲存使用者選擇的語言
+  localStorage.setItem("preferredLang", lang);
 
   // 載入 section 內容
   for (const section of sections) {
@@ -58,7 +69,7 @@ async function loadLanguage(lang) {
       // 若載入 softSkills section，初始化 gallery
       if (section === "softSkills") {
         initGallery();
-        initCardOverlay();
+        initCardOverlay(lang);
       }
 
     } catch (err) {
@@ -67,9 +78,8 @@ async function loadLanguage(lang) {
   }
 }
 
-
 // 頁面載入時讀取 localStorage 的語言
 document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("preferredLang") || "en";
+  const savedLang = localStorage.getItem("preferredLang") || "fr";
   loadLanguage(savedLang);
 });
