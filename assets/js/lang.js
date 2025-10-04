@@ -11,10 +11,10 @@ async function loadLanguage(lang) {
     },
     fr: {
       profile: "Profil",
-      education: "Éducation",
+      education: "Formation",
       experience: "Expérience",
-      mainSkills: "Compétences principales",
-      softSkills: "Compétences relationnelles",
+      mainSkills: "Compétences Principales",
+      softSkills: "Compétences Douces",
       contact: "Contact",
       headerText: "Diplôme d'ingénieur en informatique<br>À la recherche d'un stage en IA, Data Science et Systèmes Embarqués<br>Stage de 6 mois dès février 2026"
     }
