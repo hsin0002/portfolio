@@ -4,5 +4,3 @@
 *.obj
 *.exe
 *.pdb
-# Ignore pdf file
-*.pdf binary
