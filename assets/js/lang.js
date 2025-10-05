@@ -3,20 +3,20 @@ async function loadLanguage(lang) {
     en: {
       profile: "Profile",
       education: "Education",
-      experience: "Experience",
+      experience: "Experiences",
       mainSkills: "Main Skills",
       softSkills: "Soft Skills",
       contact: "Contact",
-      headerText: "Master of Computer Science<br>Seeking AI, Data Science & Embedded Systems Internship<br>6-month internship from Feb 2026"
+      headerText: "Master of Computer Science<br>Seeking AI, Data Science & Embedded Systems Internship<br>6-month end of studies internship from Feb 2026"
     },
     fr: {
       profile: "Profil",
       education: "Formation",
-      experience: "Expérience",
+      experience: "Expériences",
       mainSkills: "Compétences Principales",
-      softSkills: "Compétences Douces",
+      softSkills: "Soft skills",
       contact: "Contact",
-      headerText: "Diplôme d'ingénieur en informatique<br>À la recherche d'un stage en IA, Data Science et Systèmes Embarqués<br>Stage de 6 mois dès février 2026"
+      headerText: "Diplôme d'ingénieur en informatique<br>À la recherche d'un stage en IA, Data Science et Systèmes Embarqués<br>Stage de fin d'étude de 6 mois dès février 2026"
     }
   };
 

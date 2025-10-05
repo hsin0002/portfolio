@@ -1957,7 +1957,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #8cc9f0;
+			background-color: #61b7ec;
 			color: #ffffff !important;
 			box-shadow: none;
 		}
@@ -1985,11 +1985,20 @@ input, select, textarea {
 			.button.primary.icon:before {
 				color: #ffffff !important;
 			}
-		#contact-btn {
-			background-color: #9bb2e1; /* 按鈕背景色 */
+
+		#main .button.primary.contact-btn {
+ 			background-color: #967cd0;
 		}
 
-/* Form */
+		#main .button.primary.contact-btn:hover {
+			background-color: #a98ee2;
+		}
+
+		#main .button.primary.contact-btn:active {
+			background-color: #856bbf;
+		}
+
+		/* Form */
 
 	form {
 		margin: 0 0 2em 0;
@@ -4292,3 +4301,21 @@ section#softSkills {
   }
 }
 
+
+section#profile {
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  @media (max-width: 767px) {
+    .social-icons {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}
