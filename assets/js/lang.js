@@ -6,6 +6,7 @@ async function loadLanguage(lang) {
       experience: "Experiences",
       mainSkills: "Main Skills",
       softSkills: "Soft Skills",
+      interests: "Interests",
       contact: "Contact",
       headerText: "Master of Computer Science<br>Seeking AI, Data Science & Embedded Systems Internship<br>6-month end of studies internship from Feb 2026"
     },
@@ -15,12 +16,13 @@ async function loadLanguage(lang) {
       experience: "Expériences",
       mainSkills: "Compétences Principales",
       softSkills: "Soft skills",
+      interests: "Centres d'Intérêts",
       contact: "Contact",
-      headerText: "Diplôme d'ingénieur en informatique<br>À la recherche d'un stage en IA, Data Science et Systèmes Embarqués<br>Stage de fin d'étude de 6 mois dès février 2026"
+      headerText: "Étudiante Ingénieure en Informatique<br>À la recherche d'un stage en IA, Data Science et Systèmes Embarqués<br>Stage de fin d'étude de 6 mois dès février 2026"
     }
   };
 
-  const sections = ["profile", "education", "experience", "mainSkills", "softSkills", "contact"];
+  const sections = ["profile", "education", "experience", "mainSkills", "softSkills", "interests", "contact"];
   const main = document.getElementById("main");
   main.innerHTML = ""; // 清空 main
 
@@ -67,10 +69,12 @@ async function loadLanguage(lang) {
       });
 
       // 若載入 softSkills section，初始化 gallery
-      if (section === "softSkills") {
-        initGallery();
+      if (section === "softSkills" | section === "interests") {
+        initGallery('#softSkills');
+        initGallery('#interests');
         initCardOverlay(lang);
       }
+
 
     } catch (err) {
       console.error(err);

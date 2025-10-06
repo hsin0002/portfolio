@@ -1,26 +1,21 @@
 /* ====== 卡片滑動畫廊 ====== */
-function initGallery() {
-  const gallery = document.querySelector('.gallery-container');
-  if (!gallery) {
-    console.warn("Gallery not found.");
-    return;
-  }
-  const container = document.querySelector('.cards-container');
-  if (!container) {
-    console.warn("Gallery container not found. Skipping initGallery.");
-    return;
-  }
-  const cards = document.querySelectorAll('.cards-container .card');
+function initGallery(sectionSelector) {
+  const gallery = document.querySelector(`${sectionSelector} .gallery-container`);
+  if (!gallery) return;
+
+  const container = gallery.querySelector('.cards-container');
+  if (!container) return;
+
+  const cards = container.querySelectorAll('.card');
   let currentIndex = 0;
   let startX = 0;
   let isDragging = false;
 
   function updateGallery() {
-    const containerWidth = document.querySelector('.gallery-container').offsetWidth;
+    const containerWidth = gallery.offsetWidth;
     const cardWidth = cards[0].offsetWidth;
-    const gap = 16; // 卡片間距
+    const gap = 16;
 
-    // 讓當前卡片固定置中
     const offset = currentIndex * (cardWidth + gap) - (containerWidth - cardWidth) / 2;
     container.style.transform = `translateX(${-offset}px)`;
 
@@ -37,7 +32,7 @@ function initGallery() {
     });
   }
 
-  // 點擊卡片 → 切換到該卡片
+  // 點擊卡片切換
   cards.forEach((card, index) => {
     card.addEventListener('click', () => {
       currentIndex = index;
@@ -45,38 +40,18 @@ function initGallery() {
     });
   });
 
-  container.addEventListener('touchend', e => {
-    if (!isDragging) return;
-    const endX = e.changedTouches[0].clientX;
-    const diffX = endX - startX;
-
-    if (diffX > 50 && currentIndex > 0) {
-      currentIndex--; // 向右滑 → 上一張
-    } else if (diffX < -50 && currentIndex < cards.length - 1) {
-      currentIndex++; // 向左滑 → 下一張
-    }
-
-    updateGallery();
-    isDragging = false;
-  });
-
-
   // 觸控滑動
   container.addEventListener('touchstart', e => {
     startX = e.touches[0].clientX;
     isDragging = true;
   });
-
   container.addEventListener('touchend', e => {
     if (!isDragging) return;
     const endX = e.changedTouches[0].clientX;
     const diffX = endX - startX;
 
-    if (diffX > 50 && currentIndex > 0) {
-      currentIndex--; // 向右滑 → 上一張
-    } else if (diffX < -50 && currentIndex < cards.length - 1) {
-      currentIndex++; // 向左滑 → 下一張
-    }
+    if (diffX > 50 && currentIndex > 0) currentIndex--;
+    else if (diffX < -50 && currentIndex < cards.length - 1) currentIndex++;
 
     updateGallery();
     isDragging = false;
@@ -94,6 +69,7 @@ function initGallery() {
   updateGallery();
 }
 
+
 function initCardOverlay(lang) {
   const overlay = document.querySelector(".overlay");
   const overlayTitle = document.querySelector("#overlay-title");
@@ -109,14 +85,13 @@ function initCardOverlay(lang) {
 
   async function loadJson() {
     if (!jsonData) {
-      const repoName = 'portfolio';
       const res = await fetch(`assets/data/dataList_${lang}.json`);
       if (!res.ok) throw new Error(`dataList_${lang}.json not found`);
       jsonData = await res.json();
     }
     return jsonData;
   }
-  
+
   async function loadFolder(folder) {
     try {
       const data = await loadJson();
@@ -126,34 +101,32 @@ function initCardOverlay(lang) {
         return;
       }
 
+      // 更新文字內容
       overlayTitle.textContent = project.title || "";
       overlayYear.textContent = project.year || "";
-      overlayText.innerHTML = ""; // 清空
+      overlayText.innerHTML = ""; 
 
+      project.text.forEach(point => {
+        if (Array.isArray(point)) {
+          const ul = document.createElement("ul");
+          point.forEach(liText => {
+            const li = document.createElement("li");
+            li.textContent = liText;
+            ul.appendChild(li);
+          });
+          overlayText.appendChild(ul);
+        } else {
+          const p = document.createElement("p");
+          p.textContent = point;
+          overlayText.appendChild(p);
+        }
+      });
+
+      // 更新圖片
       overlayImages.innerHTML = "";
       overlayDots.innerHTML = "";
       captionEl.textContent = "";
 
-      // 顯示Text內容
-      project.text.forEach(point => {
-      if (Array.isArray(point)) {
-        const ul = document.createElement("ul");
-        point.forEach(liText => {
-          const li = document.createElement("li");
-          li.textContent = liText;
-          ul.appendChild(li);
-        });
-        overlayText.appendChild(ul);
-      } else {
-        const p = document.createElement("p");
-        p.textContent = point;
-        overlayText.appendChild(p);
-      }
-    });
-
-
-
-      // 展示照片
       imagesData = project.images || [];
 
       imagesData.forEach((imgData, i) => {
@@ -171,7 +144,16 @@ function initCardOverlay(lang) {
 
       captionEl.textContent = imagesData[0]?.caption || "";
       currentImageIndex = 0;
+
+      // 顯示 overlay
       overlay.classList.remove("hidden");
+
+      // 重置 overlay 左右內容捲動，保證每次從頂部開始
+      const scrollables = overlay.querySelectorAll(".overlay-left, .overlay-right , #overlay-text");
+      scrollables.forEach(el => {
+        el.scrollTop = 0;
+      });
+
     } catch (err) {
       console.error("Error loading folder:", err);
     }
@@ -188,7 +170,7 @@ function initCardOverlay(lang) {
     currentImageIndex = index;
   }
 
-  // 關閉按鈕
+  // 關閉 overlay
   closeBtn.addEventListener("click", () => overlay.classList.add("hidden"));
 
   // 綁定每個 More 按鈕
@@ -199,20 +181,17 @@ function initCardOverlay(lang) {
     });
   });
 
-  /* ===== 滑鼠滾輪切換圖片 (Desktop) ===== */
+  // 滑鼠滾輪切換圖片 (Desktop)
   overlayImages.addEventListener("wheel", e => {
     e.preventDefault();
     if (!imagesData.length) return;
-
-    if (e.deltaY > 0) {
-      currentImageIndex = (currentImageIndex + 1) % imagesData.length;
-    } else {
-      currentImageIndex = (currentImageIndex - 1 + imagesData.length) % imagesData.length;
-    }
+    currentImageIndex = e.deltaY > 0 
+      ? (currentImageIndex + 1) % imagesData.length 
+      : (currentImageIndex - 1 + imagesData.length) % imagesData.length;
     showImage(currentImageIndex);
   });
 
-  /* ===== 觸控左右滑動切換圖片 (Mobile) ===== */
+  // 觸控左右滑動切換圖片 (Mobile)
   let startX = 0;
   let isDragging = false;
 
