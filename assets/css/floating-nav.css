@@ -1,0 +1,87 @@
+/* ===== Floating Nav ===== */
+#floating-nav {
+  position: fixed;
+  top: 60%;
+  right: 20px;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 0.3em;
+  z-index: 9999;
+}
+
+#floating-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+#floating-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: medium;
+  padding: 0.4em 0.8em;
+  border-radius: 10px;
+  display: block;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#floating-nav a:hover,
+#floating-nav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Toggle button for small screens */
+#floating-nav-toggle {
+  display: none;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* ===== Responsive: 小螢幕 ===== */
+@media (max-width: 767px) {
+  #floating-nav {
+    top: auto;
+    bottom: 10px;
+    right: 10px;
+    transform: none;
+    padding: 0.3em;
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  #floating-nav ul {
+    display: none; /* 小螢幕預設隱藏 */
+    gap: 0.3em;
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    padding: 0.5em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: absolute;
+    bottom: 50px; /* 按鈕上方展開 */
+    right: 0;
+    min-width: 120px;
+  }
+
+  #floating-nav a {
+    padding: 0.3em 0.5em;
+    font-size: 0.8em;
+  }
+
+  #floating-nav-toggle {
+    display: block; /* 顯示小圖示 */
+  }
+}

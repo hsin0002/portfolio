@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="assets/css/lang-switch.css" />
+	  <link rel="stylesheet" href="assets/css/lang-switch.css" />
+    <link rel="stylesheet" href="assets/css/floating-nav.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
       /* 確保 Header 在 main 上方 */
@@ -22,7 +23,7 @@
       <!-- Header -->
       <header id="header">
         <span class="logo"><img src="assets/images/HJ.svg" alt="" /></span>
-        <h1>WU Hsin-Jou</h1>
+        <h1>Hsin-Jou WU</h1>
         <p id="header-text">Master of Computer Science<br>
           Seeking AI, Data Science & Embedded Systems Internship<br>
           6 months from Feb 2026</p>
@@ -58,9 +59,24 @@
 
     </div>
 
+    <!-- Floating Nav -->
+    <nav id="floating-nav" style="visibility: hidden;">
+      <button id="floating-nav-toggle">☰</button> <!-- 小螢幕圖示按鈕 -->
+      <ul>
+        <li><a href="#profile" class="active">Profile</a></li>
+        <li><a href="#motivation">Motivation</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#mainSkills">Main Skills</a></li>
+        <li><a href="#softSkills">Soft Skills</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/lang.js"></script>
     <script src="assets/js/gallery.js"></script>
-  </body>
+  </body>  
 </html>

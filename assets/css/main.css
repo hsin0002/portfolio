@@ -4302,8 +4302,39 @@ section#softSkills {
   }
 }
 
-
 section#profile {
+
+  /* Welcome 標題靠左 */
+  .spotlight:first-child header.major {
+    text-align: left;
+  }
+
+  .spotlight:first-child header.major h2:after {
+    display: block;
+    content: '';
+    width: 3.25em;
+    height: 2px;
+    margin: 0.7em 0 1em 0; /* 左對齊 */
+    border-radius: 2px;
+    background-color: currentColor;
+  }
+
+  /* Motivation 標題置中 */
+  .spotlight:last-child header.major {
+    text-align: center;
+  }
+
+  .spotlight:last-child header.major h2:after {
+    display: block;
+    content: '';
+    width: 3.25em;
+    height: 2px;
+    margin: 0.7em auto 1em auto; /* 中置 */
+    border-radius: 2px;
+    background-color: currentColor;
+  }
+
+  /* 社交按鈕排版 */
   .social-icons {
     display: flex;
     justify-content: flex-start;
@@ -4649,3 +4680,4 @@ section#interests {
     }
   }
 }
+
